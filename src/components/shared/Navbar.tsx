@@ -17,7 +17,7 @@ const Navbar = () => {
 
       <li>
         <Link
-          href={"/app"}
+          href={"/apps"}
           className="text-[#414040] font-semibold hover:text-[#6b35e5]"
         >
           App

@@ -18,16 +18,16 @@ const Banner = () => {
           into digital experiences that truly make an impact.
         </p>
 
-        <div className="flex gap-2">
-          <div className="flex items-center gap-2 px-4 py-2 border border-[#d0caca] rounded">
+        <div className="flex gap-2 ">
+          <div className="flex items-center gap-2 px-4 py-2 border border-[#d0caca] rounded ">
             <IoLogoGooglePlaystore />
-            <button className="text-[#001931] font-semibold ">
+            <button className="text-[#001931] font-semibold cursor-pointer hover:text-[#6b35e5]">
               <span>Google Play</span>
             </button>
           </div>
-          <div className="flex items-center gap-2 border px-4 py-2 border-[#d0caca] rounded">
+          <div className="flex items-center gap-2 border px-4 py-2 border-[#d0caca] rounded ">
             <IoLogoAppleAppstore />
-            <button className="text-[#001931] font-semibold">
+            <button className="text-[#001931] font-semibold cursor-pointer hover:text-[#6b35e5]">
               <span>App Store</span>
             </button>
           </div>
