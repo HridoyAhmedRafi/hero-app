@@ -21,13 +21,13 @@ const AppDetailsCard = ({ app }: { app: IApp }) => {
               width={240}
               height={240}
               alt={app.title}
-              className="h-48 w-48 rounded-2xl object-cover md:h-56 md:w-56"
+              className="h-40 w-40 mx-auto sm:mx-0 rounded-2xl object-cover md:h-56 md:w-56 "
             />
           </div>
 
           {/* App Information */}
           <div className="flex-1">
-            <h1 className="text-2xl font-bold text-[#001931] md:text-3xl">
+            <h1 className="text-[19px] font-bold text-[#001931] md:text-3xl">
               {app.title}
             </h1>
 
@@ -77,9 +77,11 @@ const AppDetailsCard = ({ app }: { app: IApp }) => {
 
         {/* Ratings Section */}
         <div className="mt-10 border-t border-gray-200 pt-8">
-          <h2 className="text-xl font-bold text-[#001931]">Ratings</h2>
+          <h2 className=" text-[16px] md:text-xl font-bold text-[#001931]">
+            Ratings
+          </h2>
 
-          <div className="mt-5 space-y-3">
+          <div className="mt-5 space-y-3 ">
             {app.ratings
               .slice()
               .reverse()
@@ -117,9 +119,13 @@ const AppDetailsCard = ({ app }: { app: IApp }) => {
 
         {/* Description */}
         <div className="mt-10 border-t border-gray-200 pt-8">
-          <h2 className="text-xl font-bold text-[#001931]">Description</h2>
+          <h2 className=" text-[16px] md:text-xl font-bold text-[#001931]">
+            Description
+          </h2>
 
-          <p className="mt-4 leading-7 text-gray-600">{app.description}</p>
+          <p className="mt-4 leading-7 text-gray-600 text-[14px] md:text-[18px] ">
+            {app.description}
+          </p>
         </div>
       </div>
     </div>
