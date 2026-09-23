@@ -1,6 +1,6 @@
 import { IApp } from "@/types/apps.type";
 import Image from "next/image";
-import Link from "next/link";
+
 import { FaStar } from "react-icons/fa";
 import InstallationButton from "../app-details-button/ViewDetailsButton";
 
