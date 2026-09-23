@@ -1,10 +1,15 @@
 import { IApp, Rating } from "@/types/apps.type";
 import Image from "next/image";
+import Link from "next/link";
 import { FaDownload, FaRegStar, FaStar } from "react-icons/fa";
+import DownloadButton from "../app-details-button/DownloadButton";
 
 const AppDetailsCard = ({ app }: { app: IApp }) => {
   return (
     <div className="container mx-auto px-4 py-10 ">
+      <Link href={"/apps"}>
+        <button className="cursor-pointer font-semibold mb-3 ml-1">Back</button>
+      </Link>
       <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm md:p-8">
         {/* Top Section */}
         <div className="flex flex-col gap-8 md:flex-row">
@@ -64,10 +69,8 @@ const AppDetailsCard = ({ app }: { app: IApp }) => {
             </div>
 
             {/* Download Button */}
-            <button className="cursor-pointer mt-1.5 flex w-full items-center justify-center gap-2 rounded-lg bg-[#6b35e5] px-6 py-3 font-semibold text-white transition hover:bg-[#5928c7] sm:w-fit">
-              <FaDownload />
-              Download App ({app.size} MB)
-            </button>
+
+            <DownloadButton app={app}></DownloadButton>
           </div>
         </div>
 

@@ -2,6 +2,7 @@ import { IApp } from "@/types/apps.type";
 import Image from "next/image";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
+import InstallationButton from "../app-details-button/ViewDetailsButton";
 
 const AppCard = ({ app }: { app: IApp }) => {
   return (
@@ -41,12 +42,7 @@ const AppCard = ({ app }: { app: IApp }) => {
           </div>
         </div>
 
-        {/* View Details Button */}
-        <Link href={`apps/${app.id}`}>
-          <button className="cursor-pointer mt-5 w-full rounded-lg bg-[#6b35e5] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#5928c7]">
-            View Details
-          </button>
-        </Link>
+        <InstallationButton app={app}></InstallationButton>
       </div>
     </div>
   );
