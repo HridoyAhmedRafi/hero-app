@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <ToastContainer />
         <AppsProvider>
           <Navbar></Navbar>
-          <main>{children}</main>
+          <main className="min-h-screen">{children}</main>
           <Footer></Footer>
         </AppsProvider>
       </body>

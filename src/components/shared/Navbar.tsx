@@ -1,15 +1,18 @@
+"use client";
 import logo from "@/assets/logo.png";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
+  const pathname = usePathname();
   const links = (
     <>
       <li>
         <Link
-          href={"/"}
-          className="text-[#414040] font-semibold hover:text-[#6b35e5]"
+          className={` ${pathname === "/" ? "bg-[#6b35e5] text-white" : ""}`}
+          href="/"
         >
           Home
         </Link>
@@ -17,16 +20,16 @@ const Navbar = () => {
 
       <li>
         <Link
-          href={"/apps"}
-          className="text-[#414040] font-semibold hover:text-[#6b35e5]"
+          className={` ${pathname === "/apps" ? "bg-[#6b35e5] text-white" : ""}`}
+          href="/apps"
         >
           App
         </Link>
       </li>
       <li>
         <Link
-          href={"/installation"}
-          className="text-[#414040] font-semibold hover:text-[#6b35e5]"
+          className={` ${pathname === "/installation" ? "bg-[#6b35e5] text-white" : ""}`}
+          href="/installation"
         >
           Installation
         </Link>
@@ -57,7 +60,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={-1}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className=" menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             {links}
           </ul>
@@ -68,7 +71,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{links}</ul>
+        <ul className="gap-1 menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className=" navbar-end ">
         <div className="bg-[#6b35e5] flex items-center gap-1 px-3 py-2 rounded text-white">

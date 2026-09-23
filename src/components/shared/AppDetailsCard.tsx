@@ -3,12 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaDownload, FaRegStar, FaStar } from "react-icons/fa";
 import DownloadButton from "../app-details-button/DownloadButton";
+import { MdArrowBackIos } from "react-icons/md";
 
 const AppDetailsCard = ({ app }: { app: IApp }) => {
   return (
     <div className="container mx-auto px-4 py-10 ">
       <Link href={"/apps"}>
-        <button className="cursor-pointer font-semibold mb-3 ml-1">Back</button>
+        <MdArrowBackIos className="my-5 ml-2" />
       </Link>
       <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm md:p-8">
         {/* Top Section */}

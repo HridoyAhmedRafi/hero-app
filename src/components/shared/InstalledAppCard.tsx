@@ -1,6 +1,7 @@
 import { IApp } from "@/types/apps.type";
 import Image from "next/image";
 import { FaDownload, FaStar } from "react-icons/fa";
+import UninstallButton from "../app-details-button/UninstallButton";
 
 const InstalledAppCard = ({ app }: { app: IApp }) => {
   return (
@@ -48,9 +49,7 @@ const InstalledAppCard = ({ app }: { app: IApp }) => {
         </div>
 
         {/* Right Side */}
-        <button className="shrink-0 cursor-pointer rounded-xl border border-red-200 bg-red-50 px-4 py-2.5 text-sm font-semibold text-red-500 transition hover:border-red-500 hover:bg-red-500 hover:text-white sm:px-5">
-          Uninstall
-        </button>
+        <UninstallButton app={app}></UninstallButton>
       </div>
     </div>
   );

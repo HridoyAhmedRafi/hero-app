@@ -4,7 +4,7 @@ import { CiFacebook, CiLinkedin } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
-    <div className="container mx-auto px-4 bg-[#001931] py-2 text-[#e2e5e7] mt-10 ">
+    <div className=" container mx-auto px-4 bg-[#001931] py-2 text-[#e2e5e7] mt-10 ">
       <div className=" flex items-center justify-between border-b border-[#b0b2b5]  ">
         <div className="flex items-center gap-2">
           <Image
