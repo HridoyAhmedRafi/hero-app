@@ -10,7 +10,6 @@ const GloblLoading = () => {
 
       {/* App Info */}
       <div className="mt-4">
-        {/* App Title */}
         <div className="h-6 w-3/4 rounded bg-gray-300" />
 
         {/* Downloads + Rating */}
