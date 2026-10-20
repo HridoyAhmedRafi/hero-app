@@ -2,7 +2,7 @@ import { IApp } from "@/types/apps.type";
 import AppCard from "../shared/AppCard";
 
 const getApps = async () => {
-  const res = await fetch("http://localhost:3000/data.json");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/data.json`);
   const data = await res.json();
   return data;
 };
