@@ -14,7 +14,6 @@ const AllAppsPage = () => {
       <div className="text-center mt-5 md:text-left">
         <h2 className="text-[#001931] text-[22px] font-semibold ">
           ({apps.length}) Apps Found
-          
         </h2>
       </div>
 
