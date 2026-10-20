@@ -1,14 +1,8 @@
 import { IApp } from "@/types/apps.type";
 import AppCard from "../shared/AppCard";
+import apps from "@/data/apps";
 
-const getApps = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/data.json`);
-  const data = await res.json();
-  return data;
-};
-
-const TrendingApps = async () => {
-  const apps = await getApps();
+const TrendingApps = () => {
   return (
     <div className="container mx-auto px-4 mt-15">
       <h1 className="text-[#001931]  text-[40px] font-bold text-center">

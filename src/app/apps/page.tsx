@@ -1,15 +1,8 @@
 import AppCard from "@/components/shared/AppCard";
+import apps from "@/data/apps";
 import { IApp } from "@/types/apps.type";
 
-const getApps = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/data.json`);
-  const data = await res.json();
-  return data;
-};
-
-const AllAppsPage = async () => {
-  const apps = await getApps();
-
+const AllAppsPage = () => {
   return (
     <div className="container mx-auto px-4 mt-20">
       <h1 className="text-[#001931] text-[30px] md:text-[40px] font-bold text-center">
